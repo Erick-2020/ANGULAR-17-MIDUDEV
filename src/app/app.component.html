@@ -1,3 +1,80 @@
 <!-- <router-outlet></router-outlet> -->
 
 <h1>Hola Angular</h1>
+<p>Desde {{ city.toUpperCase() }}</p>
+<p>mi edad {{10+10}}</p>
+<app-user></app-user>
+
+
+
+<section class="texto">Welcome to the Angular tutorial
+    <p>This interactive tutorial will teach you the basic building blocks to start building great apps with Angular.
+    
+    You can also learn more in our guides and reference, or ng new.
+    
+    How to use this tutorial
+    You'll need to have basic familiarity with HTML, CSS and JavaScript to understand Angular.
+    
+    Each step represents a concept in Angular. You can do one, or all of them.
+    
+    If you get stuck, click "Reveal answer" at the top.
+    
+    Ready to explore more of Angular?
+    What is Angular?
+    Angular is the web development framework for building modern apps!
+    
+    Learn more
+    Angular's Roadmap
+    Read about Angular's open source roadmap including current, future and accomplished projects.
+    
+    Learn more
+    Playground
+    Play with Angular in your browser!
+    
+    Start playing
+    Angular YouTube Course
+    Check out the official Angular YouTube channel for videos, courses and more!
+    
+    Start learning
+    Alright, let's get started.</p>
+    <p>This interactive tutorial will teach you the basic building blocks to start building great apps with Angular.
+    
+        You can also learn more in our guides and reference, or ng new.
+        
+        How to use this tutorial
+        You'll need to have basic familiarity with HTML, CSS and JavaScript to understand Angular.
+        
+        Each step represents a concept in Angular. You can do one, or all of them.
+        
+        If you get stuck, click "Reveal answer" at the top.
+        
+        Ready to explore more of Angular?
+        What is Angular?
+        Angular is the web development framework for building modern apps!
+        
+        Learn more
+        Angular's Roadmap
+        Read about Angular's open source roadmap including current, future and accomplished projects.
+        
+        Learn more
+        Playground
+        Play with Angular in your browser!
+        
+        Start playing
+        Angular YouTube Course
+        Check out the official Angular YouTube channel for videos, courses and more!
+        
+        Start learning
+        Alright, let's get started.</p>
+
+        <!-- CARGAR EL CONTENIDO DE MANERA ORDENADA Y MINTRAS VAYA HACIENDO SCROLL -->
+    @defer(on viewport){
+        <app-comments></app-comments>
+    } @placeholder {
+        <p>Futuros comentarios</p>
+        <!-- mientras no se este mostrando la informacion por x razon 
+        con el decorador loading podemos mostrar contenido miestras carga dicha informacion-->
+    } @loading {
+        <p>Cargando comentarios...</p>
+    }
+</section>

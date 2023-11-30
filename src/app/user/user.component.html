@@ -1,0 +1,34 @@
+<!-- saber si un usuario inicio sesion -->
+<!-- NUEVAS DIRECTRICES IF -->
+<section>
+    @if (isLogin) {
+        <p>Bienvenido {{userName}}</p>
+        <!-- EVENTOS -->
+        <!-- evento click de un boton -->
+        <img
+        (click)="greet()"
+        src="https://github.com/Erick-2020.png"
+        alt="photo">
+
+        <!-- COMUNICACION ENTRE COMPONNENTES PADRE A HIJO PASO 2 (username) -->
+        <!-- COMUNICACION ENTRE COMPONENTES HIJO A PADRE PASO 6 (addFavorite) -->
+        <!-- mostramos la informacion subscribiendonos a un evento del metodo para mostrar la info -->
+        <app-games username="{{userName}}"
+            (addFavoriteEvent)="getFavorite($event)"
+            
+        ></app-games>
+
+        @if (favGame != "") {
+            <p>Tu juego favorito es {{favGame}}</p>
+        }
+
+        
+    } @else {
+        <p>Inicia sesion</p>
+        <!-- ESTADOS -->
+        <!-- estando el metodo ISLOGIN en false
+        desde aqui podemos cambiar el estado de valor del metodo
+        sin necesidad de realizar una funcion -->
+        <button (click)="isLogin = true"></button>
+    }
+</section>

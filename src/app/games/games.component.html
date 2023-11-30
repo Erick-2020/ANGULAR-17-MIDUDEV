@@ -1,0 +1,12 @@
+<!-- saber si un usuario inicio sesion -->
+<!-- NUEVAS DIRECTRICES FOR -->
+<ul>
+    @for (game of games; track game.id) {
+        <!-- COMUNICACION ENTRE COMPONENTES HIJO A PADRE PASO 3 -->
+        <li (click)="fav(game.name)">{{game.name}}</li>
+    }
+</ul>
+<!-- COMUNICACION ENTRE COMPONENTES PADRE A HIJO PASO 3 -->
+<!-- Y asi traemos del componete padre al hijo y lo mostramos -->
+<!-- ya que este html se esta llamando en el componete de usuarios donde se muestra -->
+<p>Estos son los juegos favoritos de {{username}}</p>
